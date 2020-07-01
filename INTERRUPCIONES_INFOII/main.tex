@@ -96,7 +96,7 @@
 % g - Autor, título y fecha del Documento
 %----------------------------------------------------------------»
 
-\author{JUAN MANUEL RESTREPO GALARCIO\thanks{1001154483, INGENIERIA DE TELECOMUNICACIONES, UNIVERSIDAD DE ANTIOQUIA, 2020}}
+\author{JUAN MANUEL RESTREPO GALARCIO\thanks{INGENIERIA DE TELECOMUNICACIONES, UNIVERSIDAD DE ANTIOQUIA, 2020}}
 \title{INTERRUPCIONES INFORMÁTICAS.}
 \date{\today} 
 
@@ -128,27 +128,43 @@
 
 \section{INTRODUCCIÓN:}
 
-En el siguiente escrito se busca resolver preguntas entorno a las interrupciones a nivel de los microprocesadores y expandir el conocimiento de estas al hacer una introducción en conjunto con la resolución de dudas.
+En el siguiente escrito se busca resolver preguntas entorno a las interrupciones a nivel de los microprocesadores y expandir el conocimiento de estas al resolver las dudas que competen su existencia, su funcionalidad y las variaciones que tiene esta.
+
 
 \section{¿QUE ES UNA INTERRUPCIÓN?:}
 
+Para saber que es una interrupción en el contexto de la informática debemos conocer primero el funcionamiento básico de los procesadores; Estos en pocas palabras realizan una serie de tareas de manera secuencial, por lo tanto, para pasar de una tarea a otra debe haber terminado la anterior. 
 
+Las interrupciones son una manera para hacer que el procesador pare de ejecutar la tarea actual y recurra a ejecutar cierto código indicado para la situación por la cual se dio la interrupción. La función de las interrupciones es de vital importancia para la computación porque permite tanto solucionar problemas a tiempo real y evitar así daños en el hardware y software del equipo como también realizar otras tareas en paralelo al procesador.
 
+Dicho de una forma mas técnica, una interrupción es una función que, por medio de una subrutina, envía una señal al procesador indicando que es necesario ejecutar una tarea y, dependiendo la importancia de esta, el procesador decide si es necesario la interrupción de la tarea actual para ejecutar la enviada por la señal.
 
+No hay mucha información sobre los inicios de esta función pero se sabe que antes se usaba un método mucho menos eficientes, consistía en verificar cada intervalo de tiempo si los componentes del hardware estaban funcionando de manera correcta; Con la llegada de las interrupciones la eficacia para esto mejoró porque ya no era necesario gastar recursos en verificar el correcto funcionamiento sino que, al momento de haber alguna falla, se envía una señal de interrupción que indica al procesador la existencia de un problema.
 
-\section{TIPOS DE INTERRUPCIONES:}
-
-
-
+Existen varios tipos de interrupciones que pueden catalogarse entre interrupciones de hardware e interrupciones de software.
 
 
 \section{INTERRUPCIONES DE HARDWARE:}
 
+En las interrupciones de hardware o interrupciones requeridas por hardware entran los tipos de interrupción que envían datos al procesador provenientes de los distintos componentes el computador y periféricos conectados a este. En esta categoría también puede entrar las interrupciones que genera el mismo procesador para hacerse saber que tiene problemas durante la ejecución.
 
+Un ejemplo de estas puede ser cuando un componente de la maquina falla: Cuando en alguno de los componentes se genera un fallo, el componente esta en la capacidad de enviar una interrupción al procesador para que este actué frente a la situación; ejemplos de estos puede ser una falla en la lectura de disco, la fuente de poder no funciona de la manera correcta, el procesador alcanzando su limite de temperatura, etc.
 
+Otro ejemplo puede ser la terminación de un proceso que realiza un equipo externo al equipo pero que esta conectado a este, como una señal para indicar que una impresora terminó de escanear un papel.
+
+El modo en el que se envían las interrupciones es generando una señal eléctrica que viaja por la linea IRQ (Interrupt Request) que llega al procesador y este ejecuta la linea de código que indica el tipo de interrupción que llega a través de la señal.
 
 
 \section{INTERRUPCIONES DE SOFTWARE:}
+
+Podemos catalogar como interrupciones de software aquellas interrupciones que se dan en el sistema operativo por medio de los programas que tenga este en ejecución.
+
+Se puede ver dos tipos de interrupciones de software: interrupciones que son llamadas porque el programa en ejecución presenta anomalías y necesita de la respuesta del procesador; Y las interrupciones que se dan cuando el programa necesita de una información externa.
+
+Son mas comunes las interrupciones que se generan al necesitar información de los periféricos del dispositivo, funciona de la siguiente manera: El programa le solicita al procesador la información contenida en el disco duro del computador, por lo tanto envía una interrupción al procesador que para de ejecutar las tareas del programa para extraer la información del disco duro y enviarla al programa; Hecho esto ultimo, la ejecución del programa se retoma desde donde se había dejado.
+
+
+
 
 
 
