@@ -144,7 +144,7 @@ El primer procesador que poseía mas de un subprocesador y tenía la capacidad d
 
 \section{HILOS EN EL HARDWARE:}
 
-Los hilos de procesamiento funcionan por medio de los subprocesadores de la CPU; Antes de la llegada de los procesadores multinucleo Intel había logrado ejecutar dos hilos de procesamiento en un solo procesador pero, con la llegada del Dual Core, esta tecnología fue dejada de lado hasta unos años después que se empezó a implementar para hacer que 4 núcleos pudiesen ejecutar 8 hilos de procesamiento simultáneamente.
+Los hilos de procesamiento funcionan por medio de los subprocesadores de la CPU; Antes de la llegada de los procesadores multinucleo Intel había logrado ejecutar dos hilos de procesamiento en un solo procesador pero, con la llegada del Dual Core, esta tecnología fue dejada de lado hasta unos años después que se empezó a implementar para hacer que cada núcleo de la CPU pudiesen ejecutar 2 hilos de procesamientos de manera simultanea.
 
 El funcionamiento de los hilos de procesamiento dentro del hardware es el siguiente: Un hilo principal divide las tareas que recibe en en varios hilos que son procesados en alguno de los núcleos disponibles; Al terminar todas las tareas, el tiempo en el que estuvo en ejecución el hilo principal corresponde al tiempo del hilo de procesamiento que tardó mas en realizar su tarea y así ya estarían otra vez disponibles los hilos para realizar mas tareas.
 
@@ -153,10 +153,10 @@ Un ejemplo de la implementación de hilos de procesamiento de manera eficiente p
 
 \section{HILOS EN EL SOFTWARE:}
 
-...
+Los hilos de procesamiento dentro del software son muy importantes para la ejecución de varios programas al mismo tiempo o un eficiente funcionamiento de cierto programa; Es importante que el programa en cuestión este diseñado con la opción del multihilo, de lo contrario el programa no hará uso de esta opción. Un ejemplo de un programa que no posee la capacidad de ejecutar tareas por multihilos serían los trabajos realizados por los estudiantes del curso informática 2 hasta el momento, dado a que son programas básicos que no necesitan de esta función. Programas que utilizan la función del multihilo vienen siendo por ejemplo navegadores o videojuegos actuales, que tienen muchos procesos simultáneos y el tener disponibles varios hilos hará que el programa funcione de forma constante correctamente.
 
 \section{BIBLIOGRAFÍA:}
-
+La información en la cual se basó el informe escrito fue extraída del articulo El procesador por \cite{rebollo2011procesador} .
 
 
 
