@@ -140,12 +140,15 @@ El funcionamiento de los núcleos consiste en recibir tareas por parte de los hi
 
 Actualmente esta tecnología es muy importante porque no es común para un ordenador o un celular ejecutar solo una tarea al mismo tiempo y, de no estar incorporada esta tecnología podríamos decir que, si un procesador con 2 núcleos es el doble de eficiente que un procesador con un solo núcleo, el tiempo de ejecución se vería duplicado.
 
-
-
+El primer procesador que poseía mas de un subprocesador y tenía la capacidad de ejecutar mas de una tarea simultáneamente fue el IBM POWER4 en el años 2001 pero no fue un procesador distribuido hacia las masas; El que marcó un antes y después en la multitarea dentro de la CPU fue la compañía Intel al sacar, en el año 2006, su gama de procesadores Dual Core aumentando con creces las velocidad de procesamiento de las CPU.
 
 \section{HILOS EN EL HARDWARE:}
 
-...
+Los hilos de procesamiento funcionan por medio de los subprocesadores de la CPU; Antes de la llegada de los procesadores multinucleo Intel había logrado ejecutar dos hilos de procesamiento en un solo procesador pero, con la llegada del Dual Core, esta tecnología fue dejada de lado hasta unos años después que se empezó a implementar para hacer que 4 núcleos pudiesen ejecutar 8 hilos de procesamiento simultáneamente.
+
+El funcionamiento de los hilos de procesamiento dentro del hardware es el siguiente: Un hilo principal divide las tareas que recibe en en varios hilos que son procesados en alguno de los núcleos disponibles; Al terminar todas las tareas, el tiempo en el que estuvo en ejecución el hilo principal corresponde al tiempo del hilo de procesamiento que tardó mas en realizar su tarea y así ya estarían otra vez disponibles los hilos para realizar mas tareas.
+
+Un ejemplo de la implementación de hilos de procesamiento de manera eficiente podría ser un programa que simule el funcionamiento de semáforos; cada hilo tiene la tarea de cambiar el color del semáforo al mismo tiempo cosa que no sería posible realizar en los procesos secuenciales de un procesador con un solo hilo de procesamiento.
 
 
 \section{HILOS EN EL SOFTWARE:}
